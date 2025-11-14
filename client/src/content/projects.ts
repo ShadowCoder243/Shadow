@@ -1,0 +1,66 @@
+import devImage from "@assets/generated_images/Developer_coding_visualization_387e85f4.png";
+import designImage from "@assets/generated_images/Graphic_design_workspace_a6e46fef.png";
+import itImage from "@assets/generated_images/IT_security_concept_15bc5ef3.png";
+
+export const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description: "Plateforme e-commerce moderne avec paiement intégré et gestion des stocks en temps réel",
+    category: "dev" as const,
+    tags: ["React", "Node.js", "Stripe", "MongoDB"],
+    image: devImage,
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 2,
+    title: "Brand Identity Design",
+    description: "Conception complète d'identité visuelle pour startup tech avec logo, charte graphique",
+    category: "design" as const,
+    tags: ["Illustrator", "Branding", "Logo Design"],
+    image: designImage,
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 3,
+    title: "Network Security Audit",
+    description: "Audit complet de sécurité réseau, pentesting et recommandations d'amélioration",
+    category: "it" as const,
+    tags: ["Security", "Pentesting", "Firewall"],
+    image: itImage,
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 4,
+    title: "Mobile App UI/UX",
+    description: "Design d'interface complète pour application mobile de fitness avec animations",
+    category: "design" as const,
+    tags: ["Figma", "UI/UX", "Mobile"],
+    image: designImage,
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 5,
+    title: "Task Management System",
+    description: "Application web de gestion de tâches collaborative avec synchronisation temps réel",
+    category: "dev" as const,
+    tags: ["React", "WebSocket", "PostgreSQL"],
+    image: devImage,
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 6,
+    title: "IT Infrastructure Setup",
+    description: "Configuration complète d'infrastructure IT pour PME avec backup automatique et monitoring",
+    category: "it" as const,
+    tags: ["Networking", "Backup", "Configuration"],
+    image: itImage,
+    link: "#",
+    github: "#",
+  },
+];
