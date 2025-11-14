@@ -1,0 +1,155 @@
+[2025-11-14 16:37] +243 894 197 371: Voici un prompt complet et professionnel pour la création d’un site web multi-pages dynamique et animé pour ShadowCoder:
+
+---
+
+🧠 Prompt de création de site web pour ShadowCoder
+
+Objectif:
+Créer un site web multi-pages ultra dynamique, moderne et professionnel pour ShadowCoder, une marque personnelle axée sur l’informatique, le développement, le graphisme et le support IT. Le site doit comporter beaucoup d’animations, un design fluide et captivant, et une expérience utilisateur immersive.
+
+---
+
+🧩 Structure du site (multi-pages)
+
+1. Page d’accueil – "Bienvenue dans l’ombre"
+   - Animation d’intro avec le logo (fourni dans l’image)
+   - Slogan: "Stay in the shadow, code in the light"
+   - Présentation rapide de ShadowCoder
+   - Effets de survol, transitions fluides, fond animé
+
+2. À propos – "Qui est ShadowCoder?"
+   - Portrait de ShadowCoder: passionné d’informatique, créatif et polyvalent
+   - Animation de texte et timeline interactive
+   - Citation: "Je ne code pas juste des lignes, je construis des mondes."
+
+3. Compétences – "Ce que je sais faire"
+   - Développeur Web & Logiciel:
+     - Création de sites, applications, API
+     - Animation de code en live (HTML/CSS/JS)
+   - Graphiste:
+     - Design de logos, affiches, UI/UX
+     - Galerie animée de créations
+   - Support IT:
+     - Maintenance, dépannage, optimisation
+     - Chatbot interactif simulant une session de support
+   - Autres talents:
+     - Cybersécurité, automatisation, gestion de serveurs
+
+4. Portfolio – "Mes projets dans la lumière"
+   - Grille animée de projets
+   - Filtres dynamiques (dev / design / IT)
+   - Vidéos et mockups interactifs
+
+5. Contact – "Connecte-toi à l’ombre"
+   - Formulaire animé
+   - Intégration WhatsApp: +243894197371
+   - Liens vers réseaux sociaux (Twitter, Facebook, Instagram)
+
+---
+
+🎨 Design & Animation
+
+- Couleurs dominantes: violet, bleu ciel, noir profond
+- Style: cyberpunk / tech futuriste
+- Animations:
+  - Parallax scrolling
+  - Effets de survol lumineux
+  - Transitions entre pages avec morphing
+  - Particules en arrière-plan
+  - Texte qui s’écrit en live comme du code
+
+---
+
+🔧 Fonctionnalités professionnelles à intégrer
+
+- Responsive design (mobile/tablette/desktop)
+- SEO optimisé pour "ShadowCoder"
+- Intégration d’un blog technique
+- Système de newsletter
+- Mode sombre / clair
+- Chargement rapide (optimisation des assets)
+- Intégration du logo comme favicon et animation d’intro
+
+---
+
+Tu veux que je t’aide à transformer ce prompt en cahier des charges pour un développeur ou une agence web? Je peux aussi t’aider à rédiger le contenu de chaque page ou créer un wireframe visuel.
+[2025-11-14 16:37] +243 894 197 371: Parfait! Voici une version mise à jour du prompt de création de site web professionnel pour ShadowCoder, incluant tes réseaux sociaux et ton adresse email:
+
+---
+
+🌐 Prompt de création de site web dynamique pour ShadowCoder
+
+Objectif:
+Créer un site web multi-pages ultra dynamique, moderne et professionnel pour ShadowCoder, une marque personnelle axée sur l’informatique, le développement, le graphisme et le support IT. Le site doit comporter beaucoup d’animations, un design fluide et captivant, et une expérience utilisateur immersive.
+
+---
+
+🧩 Structure du site (multi-pages)
+
+1. Page d’accueil – "Bienvenue dans l’ombre"
+   - Animation d’intro avec le logo (fourni)
+   - Slogan: "Stay in the shadow, code in the light"
+   - Présentation rapide de ShadowCoder
+   - Effets de survol, transitions fluides, fond animé
+
+2. À propos – "Qui est ShadowCoder?"
+   - Portrait: passionné d’informatique, créatif et polyvalent
+   - Timeline animée de son parcours
+   - Citation: "Je ne code pas juste des lignes, je construis des mondes."
+
+3. Compétences – "Ce que je sais faire"
+   - Développeur Web & Logiciel:
+     - Sites, apps, API, automatisation
+     - Animation de code en live
+   - Graphiste:
+     - Logos, affiches, UI/UX
+     - Galerie animée
+   - Support IT:
+     - Maintenance, dépannage, optimisation
+     - Chatbot interactif simulant une session de support
+   - Cybersécurité & Réseaux:
+     - Sécurisation, surveillance, configuration
+     - Visualisations interactives
+
+4. Portfolio – "Mes projets dans la lumière"
+   - Grille animée de projets
+   - Filtres dynamiques (dev / design / IT)
+   - Vidéos et mockups interactifs
+
+5. Contact – "Connecte-toi à l’ombre"
+   - Formulaire animé
+   - Intégration WhatsApp: +243894197371
+   - Email: shadowcoder243@gmail.com
+   - Réseaux sociaux:
+     - [Facebook – ShadowCoder](https://facebook.com/ShadowCoder)
+     - [Twitter – @ShadowCoder243](https://twitter.com/ShadowCoder243)
+     - [TikTok – @ShadowCoder](https://www.tiktok.com/@ShadowCoder)
+
+---
+
+🎨 Design & Animation
+
+- Couleurs dominantes: violet, bleu ciel, noir profond
+- Style: cyberpunk / tech futuriste
+- Animations:
+  - Parallax scrolling
+  - Effets de survol lumineux
+  - Transitions entre pages avec morphing
+  - Particules en arrière-plan
+  - Texte qui s’écrit en live comme du code
+
+---
+
+🔧 Fonctionnalités professionnelles à intégrer
+
+- Responsive design (mobile/tablette/desktop)
+- SEO optimisé pour "ShadowCoder"
+- Intégration d’un blog technique
+- Système de newsletter
+- Mode sombre / clair
+- Chargement rapide (optimisation des assets)
+- Intégration du logo comme favicon et animation d’intro
+
+---
+
+Tu veux que je t’aide à rédiger le contenu de chaque page ou à créer une maquette visuelle? Je peux aussi t’aider à préparer un pitch pour présenter ton site à des partenaires ou clients.
