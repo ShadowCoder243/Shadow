@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoSrc from "@/assets/shadowcoder-logo.svg";
+import logoSrc from "@/assets/favicon.png";
 
 interface LogoProps {
   className?: string;
@@ -18,7 +18,7 @@ export function Logo({ className = "", size = 32 }: LogoProps) {
       <img
         src={logoSrc}
         alt="Logo ShadowCoder"
-        className="object-contain drop-shadow-[0_0_16px_rgba(103,232,249,0.35)]"
+        className="object-contain rounded-lg drop-shadow-[0_0_16px_rgba(103,232,249,0.35)]"
         style={{ width: size, height: size }}
       />
       <motion.span

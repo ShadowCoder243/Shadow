@@ -8,7 +8,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { GlowCard } from "@/components/motion/GlowCard";
 import { fadeInUp } from "@/components/motion/variants";
-import heroImage from "@assets/generated_images/Graphic_design_workspace_a6e46fef.png";
+import heroImage from "@assets/generated_images/shadooow.png";
 import { Logo } from "@/components/Logo";
 
 export default function Home() {
