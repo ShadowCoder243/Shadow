@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun, Menu, X, Code2 } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/Logo";
 
 const navItems = [
   { label: "Accueil", path: "/" },
@@ -41,28 +42,10 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group" data-testid="link-home">
-            <motion.div
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              <Code2 className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
-              <motion.div
-                className="absolute inset-0 bg-primary/20 rounded-full blur-xl"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </motion.div>
+          <Link href="/" className="flex items-center gap-3 group" data-testid="link-home">
+            <Logo size={32} />
             <span className="text-xl font-display font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              ShadowCoder
+              SHADOWCODER
             </span>
           </Link>
 

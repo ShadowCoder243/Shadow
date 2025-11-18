@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Send } from "lucide-react";
-import { SiFacebook, SiX, SiTiktok } from "react-icons/si";
+import { Mail, Send } from "lucide-react";
+import { SiFacebook, SiTelegram } from "react-icons/si";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { GlowCard } from "@/components/motion/GlowCard";
@@ -11,6 +11,7 @@ import { fadeInUp } from "@/components/motion/variants";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Logo } from "@/components/Logo";
 import {
   Form,
   FormControl,
@@ -20,14 +21,23 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { insertContactMessageSchema, type InsertContactMessage } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+  email: z.string().email("Email invalide"),
+  subject: z.string().min(3, "Le sujet doit contenir au moins 3 caractères"),
+  message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<InsertContactMessage>({
-    resolver: zodResolver(insertContactMessageSchema),
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -36,29 +46,24 @@ export default function Contact() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactMessage) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response;
-    },
-    onSuccess: () => {
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    // Créer un lien mailto avec les données du formulaire
+    const mailtoLink = `mailto:shadowcoder243@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`)}`;
+    
+    // Ouvrir le client de messagerie
+    window.location.href = mailtoLink;
+    
+    // Simuler un délai pour l'UX
+    setTimeout(() => {
+      setIsSubmitting(false);
       toast({
-        title: "Message envoyé!",
-        description: "Je vous répondrai dans les plus brefs délais.",
+        title: "Message préparé!",
+        description: "Votre client de messagerie devrait s'ouvrir. Si ce n'est pas le cas, envoyez un email à shadowcoder243@gmail.com",
       });
       form.reset();
-    },
-    onError: () => {
-      toast({
-        title: "Erreur",
-        description: "Une erreur est survenue. Veuillez réessayer.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: InsertContactMessage) => {
-    contactMutation.mutate(data);
+    }, 500);
   };
 
   return (
@@ -69,6 +74,9 @@ export default function Contact() {
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" data-testid="text-contact-heading">
               Connecte-toi à l'ombre
             </h1>
+            <div className="flex justify-center mb-8">
+              <Logo size={72} />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Une question, un projet? N'hésitez pas à me contacter. Je serai ravi d'échanger avec vous.
             </p>
@@ -170,10 +178,10 @@ export default function Contact() {
                         type="submit"
                         size="lg"
                         className="w-full group"
-                        disabled={contactMutation.isPending}
+                        disabled={isSubmitting}
                         data-testid="button-submit"
                       >
-                        {contactMutation.isPending ? (
+                        {isSubmitting ? (
                           <>
                             <motion.div
                               animate={{ rotate: 360 }}
@@ -182,7 +190,7 @@ export default function Contact() {
                             >
                               ⚡
                             </motion.div>
-                            Envoi en cours...
+                            Préparation...
                           </>
                         ) : (
                           <>
@@ -219,30 +227,10 @@ export default function Contact() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <GlowCard>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <MessageCircle className="h-6 w-6 text-primary" />
-                      <h3 className="text-lg font-display font-semibold">WhatsApp</h3>
-                    </div>
-                    <a
-                      href="https://wa.me/243894197371"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      data-testid="link-whatsapp-card"
-                    >
-                      +243 894 197 371
-                    </a>
-                  </div>
-                </GlowCard>
-              </motion.div>
-
-              <motion.div variants={fadeInUp}>
                 <GlowCard glowColor="blue">
                   <div className="p-6">
                     <h3 className="text-lg font-display font-semibold mb-4">
-                      Réseaux Sociaux
+                      Présence en ligne
                     </h3>
                     <div className="space-y-3">
                       <a
@@ -253,27 +241,17 @@ export default function Contact() {
                         data-testid="link-facebook-card"
                       >
                         <SiFacebook className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">Facebook</span>
+                        <span className="text-sm">Facebook — ShadowCoder</span>
                       </a>
                       <a
-                        href="https://twitter.com/ShadowCoder243"
+                        href="https://t.me/ShadowCoder"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
-                        data-testid="link-twitter-card"
+                        data-testid="link-telegram-card"
                       >
-                        <SiX className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">X / Twitter</span>
-                      </a>
-                      <a
-                        href="https://www.tiktok.com/@ShadowCoder"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                        data-testid="link-tiktok-card"
-                      >
-                        <SiTiktok className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">TikTok</span>
+                        <SiTelegram className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">Telegram — @ShadowCoder</span>
                       </a>
                     </div>
                   </div>

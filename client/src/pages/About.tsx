@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Lightbulb, Rocket, Trophy } from "lucide-react";
+import { Logo } from "@/components/Logo";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { fadeInUp, slideInLeft, slideInRight } from "@/components/motion/variants";
@@ -8,26 +9,26 @@ const timelineItems = [
   {
     icon: Rocket,
     year: "2020",
-    title: "Débuts dans le code",
-    description: "Découverte de la programmation et passion immédiate pour le développement web",
+    title: "Premiers pixels animés",
+    description: "Découverte de la programmation et création de mes premières interfaces interactives",
   },
   {
     icon: Code2,
     year: "2021",
-    title: "Développeur Full-Stack",
-    description: "Maîtrise des technologies modernes: React, Node.js, bases de données",
+    title: "Focus Front-End",
+    description: "Maîtrise de React, Vite et TypeScript pour des expériences 100% côté client",
   },
   {
     icon: Lightbulb,
     year: "2022",
     title: "Design & Créativité",
-    description: "Expansion vers le design graphique et l'UI/UX pour créer des expériences complètes",
+    description: "Approfondissement UI/UX, identité visuelle et motion design pour harmoniser chaque projet",
   },
   {
     icon: Trophy,
     year: "2023-2025",
-    title: "Expert Polyvalent",
-    description: "Développement, design, support IT et cybersécurité - un professionnel complet",
+    title: "Studio ShadowCoder",
+    description: "Accompagnement digital, front-end immersif et identités visuelles clé en main",
   },
 ];
 
@@ -40,6 +41,9 @@ export default function About() {
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" data-testid="text-about-heading">
               Qui est ShadowCoder?
             </h1>
+            <div className="flex justify-center mb-8">
+              <Logo size={80} />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Un passionné d'informatique, créatif et polyvalent, qui ne code pas juste des lignes 
               mais construit des mondes digitaux
@@ -65,8 +69,8 @@ export default function About() {
                 réalité digitale.
               </p>
               <p className="text-muted-foreground">
-                Que ce soit un site web élégant, une application performante, un design captivant 
-                ou une infrastructure sécurisée, je m'engage à livrer l'excellence.
+                Que ce soit un site web élégant, une application front-end performante ou un design captivant,
+                je m'engage à livrer l'excellence.
               </p>
             </div>
           </motion.div>

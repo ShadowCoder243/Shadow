@@ -1,7 +1,8 @@
 import { Link } from "wouter";
-import { Code2, Mail, MessageCircle } from "lucide-react";
-import { SiFacebook, SiX, SiTiktok } from "react-icons/si";
+import { Mail } from "lucide-react";
+import { SiFacebook, SiTelegram } from "react-icons/si";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,12 +12,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Code2 className="h-6 w-6 text-primary" />
-              <span className="text-lg font-display font-bold">ShadowCoder</span>
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size={28} />
+              <span className="text-lg font-display font-bold">SHADOWCODER</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Stay in the shadow, code in the light
+              Front-end immersif, identité visuelle et accompagnement digital sur-mesure.
             </p>
           </div>
 
@@ -57,43 +58,26 @@ export function Footer() {
                 <Mail className="h-4 w-4" />
                 shadowcoder243@gmail.com
               </a>
-              <a
-                href="https://wa.me/243894197371"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-whatsapp"
-              >
-                <MessageCircle className="h-4 w-4" />
-                +243 894 197 371
-              </a>
-              <div className="flex gap-3 pt-2">
+              <div className="space-y-2 pt-2">
                 <a
                   href="https://facebook.com/ShadowCoder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                   data-testid="link-facebook"
                 >
                   <SiFacebook className="h-5 w-5" />
+                  ShadowCoder
                 </a>
                 <a
-                  href="https://twitter.com/ShadowCoder243"
+                  href="https://t.me/ShadowCoder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                  data-testid="link-twitter"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                  data-testid="link-telegram"
                 >
-                  <SiX className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@ShadowCoder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  data-testid="link-tiktok"
-                >
-                  <SiTiktok className="h-5 w-5" />
+                  <SiTelegram className="h-5 w-5" />
+                  @ShadowCoder
                 </a>
               </div>
             </div>

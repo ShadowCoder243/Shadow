@@ -1,14 +1,26 @@
 import devImage from "@assets/generated_images/Developer_coding_visualization_387e85f4.png";
 import designImage from "@assets/generated_images/Graphic_design_workspace_a6e46fef.png";
-import itImage from "@assets/generated_images/IT_security_concept_15bc5ef3.png";
 
-export const projects = [
+export type ProjectCategory = "dev" | "design" | "support";
+
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  category: ProjectCategory;
+  tags: string[];
+  image: string;
+  link?: string;
+  github?: string;
+};
+
+export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Plateforme e-commerce moderne avec paiement intégré et gestion des stocks en temps réel",
-    category: "dev" as const,
-    tags: ["React", "Node.js", "Stripe", "MongoDB"],
+    title: "E-Commerce Front Experience",
+    description: "Interface React animée avec panier en temps réel et personnalisation produit côté client.",
+    category: "dev",
+    tags: ["React", "TypeScript", "Framer Motion"],
     image: devImage,
     link: "#",
     github: "#",
@@ -16,8 +28,8 @@ export const projects = [
   {
     id: 2,
     title: "Brand Identity Design",
-    description: "Conception complète d'identité visuelle pour startup tech avec logo, charte graphique",
-    category: "design" as const,
+    description: "Identité visuelle complète pour une startup créative : logo, palette et système typographique.",
+    category: "design",
     tags: ["Illustrator", "Branding", "Logo Design"],
     image: designImage,
     link: "#",
@@ -25,19 +37,19 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Network Security Audit",
-    description: "Audit complet de sécurité réseau, pentesting et recommandations d'amélioration",
-    category: "it" as const,
-    tags: ["Security", "Pentesting", "Firewall"],
-    image: itImage,
+    title: "Landing Page Interactive",
+    description: "Page d'atterrissage 100% front-end avec storytelling, interactions et intégration du logo.",
+    category: "dev",
+    tags: ["Vite", "Animations", "Responsive"],
+    image: devImage,
     link: "#",
     github: "#",
   },
   {
     id: 4,
     title: "Mobile App UI/UX",
-    description: "Design d'interface complète pour application mobile de fitness avec animations",
-    category: "design" as const,
+    description: "Design complet d'une application de fitness avec prototypes haute fidélité et motion UI.",
+    category: "design",
     tags: ["Figma", "UI/UX", "Mobile"],
     image: designImage,
     link: "#",
@@ -45,21 +57,21 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Task Management System",
-    description: "Application web de gestion de tâches collaborative avec synchronisation temps réel",
-    category: "dev" as const,
-    tags: ["React", "WebSocket", "PostgreSQL"],
+    title: "Dashboard Créateur",
+    description: "Dashboard front-end pour créateurs de contenu avec graphiques live et mode sombre.",
+    category: "dev",
+    tags: ["React", "Recharts", "UI System"],
     image: devImage,
     link: "#",
     github: "#",
   },
   {
     id: 6,
-    title: "IT Infrastructure Setup",
-    description: "Configuration complète d'infrastructure IT pour PME avec backup automatique et monitoring",
-    category: "it" as const,
-    tags: ["Networking", "Backup", "Configuration"],
-    image: itImage,
+    title: "Support Digital & Coaching",
+    description: "Mise en ligne, optimisation SEO léger et formation client pour une marque lifestyle.",
+    category: "support",
+    tags: ["CMS", "No-Code", "Coaching"],
+    image: designImage,
     link: "#",
     github: "#",
   },

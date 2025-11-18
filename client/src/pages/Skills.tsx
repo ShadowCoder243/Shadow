@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, ShieldCheck, Server } from "lucide-react";
+import { Code2, Palette, MonitorSmartphone, Sparkles } from "lucide-react";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { GlowCard } from "@/components/motion/GlowCard";
@@ -8,17 +8,16 @@ import { fadeInUp } from "@/components/motion/variants";
 import { Badge } from "@/components/ui/badge";
 import devImage from "@assets/generated_images/Developer_coding_visualization_387e85f4.png";
 import designImage from "@assets/generated_images/Graphic_design_workspace_a6e46fef.png";
-import itImage from "@assets/generated_images/IT_security_concept_15bc5ef3.png";
 
 const devSkills = [
   "React / Next.js",
-  "Node.js / Express",
+  "Vite / Tailwind CSS",
   "TypeScript / JavaScript",
-  "Python",
-  "PostgreSQL / MongoDB",
-  "REST APIs / GraphQL",
-  "Git / GitHub",
-  "Docker / CI/CD",
+  "Framer Motion / GSAP",
+  "Three.js / R3F",
+  "Intégration API côté client",
+  "Optimisation Core Web Vitals",
+  "Accessibilité & SEO",
 ];
 
 const designSkills = [
@@ -32,26 +31,26 @@ const designSkills = [
   "Color Theory",
 ];
 
-const itSkills = [
-  "Maintenance PC/Mac",
-  "Réseaux & Configuration",
-  "Dépannage Système",
-  "Optimisation Performance",
-  "Installation Logiciels",
-  "Backup & Recovery",
-  "Support Technique",
-  "Formation Utilisateurs",
+const supportSkills = [
+  "Maintenance logicielle",
+  "Optimisation d'interface",
+  "Assistance CMS",
+  "Intégration No-Code",
+  "Automatisation légère",
+  "Support contenu",
+  "Formation client",
+  "Suivi post-livraison",
 ];
 
-const securitySkills = [
-  "Pentesting & Audit",
-  "Sécurisation Réseau",
-  "Firewall Configuration",
-  "VPN Setup",
-  "Surveillance & Monitoring",
-  "Incident Response",
-  "OWASP Top 10",
-  "Encryption & SSL",
+const creativeSkills = [
+  "Direction artistique",
+  "Design système",
+  "Motion UI",
+  "Prototypage Figma",
+  "Brand voice",
+  "Micro-interactions",
+  "Documentation design",
+  "Workshops créatifs",
 ];
 
 export default function Skills() {
@@ -77,10 +76,10 @@ export default function Skills() {
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <Code2 className="h-8 w-8 text-primary" />
-                      <h2 className="text-3xl font-display font-bold">Développeur Web & Logiciel</h2>
+                      <h2 className="text-3xl font-display font-bold">Créateur Front-End & UI</h2>
                     </div>
                     <p className="text-muted-foreground mb-6">
-                      Création de sites web, applications, APIs et automatisation avec les technologies modernes
+                      Création de sites web, applications front-end et micro-interactions avec des technologies 100% orientées client.
                     </p>
                     <div className="mb-6 bg-muted/30 p-4 rounded-lg border border-border">
                       <div className="font-mono text-sm text-primary mb-2">
@@ -138,7 +137,7 @@ export default function Skills() {
                       <h2 className="text-3xl font-display font-bold">Graphiste Créatif</h2>
                     </div>
                     <p className="text-muted-foreground mb-6">
-                      Design de logos, affiches, UI/UX - création visuelle qui marque les esprits
+                      Logos, identités visuelles et UI/UX sur mesure pour offrir une expérience cohérente et mémorable.
                     </p>
                     <div className="mb-6">
                       <div className="flex gap-4 mb-3">
@@ -172,28 +171,28 @@ export default function Skills() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
-                      <Server className="h-8 w-8 text-primary" />
-                      <h2 className="text-3xl font-display font-bold">Support IT</h2>
+                      <MonitorSmartphone className="h-8 w-8 text-primary" />
+                      <h2 className="text-3xl font-display font-bold">Support Digital</h2>
                     </div>
                     <p className="text-muted-foreground mb-6">
-                      Maintenance, dépannage et optimisation de vos systèmes informatiques
+                      Maintenance front, optimisation continue et accompagnement pour vos outils en ligne.
                     </p>
-                    <div className="mb-6 bg-muted/30 p-4 rounded-lg border border-border">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div className="mb-6 bg-muted/30 p-4 rounded-lg border border-border space-y-2">
+                      <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        <span className="text-sm">Système opérationnel</span>
-                      </div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        <span className="text-sm">Performance optimisée</span>
+                        <span className="text-sm">Site en ligne et monitoré</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        <span className="text-sm">Sécurité renforcée</span>
+                        <span className="text-sm">Performance suivie</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                        <span className="text-sm">Clients autonomes & formés</span>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {itSkills.map((skill, index) => (
+                      {supportSkills.map((skill, index) => (
                         <motion.div
                           key={skill}
                           initial={{ opacity: 0, scale: 0.8 }}
@@ -201,20 +200,15 @@ export default function Skills() {
                           transition={{ delay: index * 0.05 }}
                           viewport={{ once: true }}
                         >
-                          <Badge variant="secondary" data-testid={`badge-it-${index}`}>
+                          <Badge variant="secondary" data-testid={`badge-support-${index}`}>
                             {skill}
                           </Badge>
                         </motion.div>
                       ))}
                     </div>
                   </div>
-                  <div className="relative h-64 lg:h-auto rounded-lg overflow-hidden">
-                    <img
-                      src={itImage}
-                      alt="IT Support"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                  <div className="relative h-64 lg:h-auto rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 via-accent/30 to-primary/10 flex items-center justify-center">
+                    <MonitorSmartphone className="h-24 w-24 text-primary/70" />
                   </div>
                 </div>
               </GlowCard>
@@ -223,57 +217,57 @@ export default function Skills() {
             <motion.div variants={fadeInUp}>
               <GlowCard glowColor="blue">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                  <div className="order-2 lg:order-1 relative h-64 lg:h-auto rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <ShieldCheck className="h-32 w-32 text-primary/50" />
+                  <div className="order-2 lg:order-1 relative h-64 lg:h-auto rounded-lg overflow-hidden bg-gradient-to-br from-accent/20 via-primary/10 to-background flex items-center justify-center">
+                    <Sparkles className="h-32 w-32 text-accent/60" />
                   </div>
                   <div className="order-1 lg:order-2">
                     <div className="flex items-center gap-3 mb-4">
-                      <ShieldCheck className="h-8 w-8 text-accent" />
-                      <h2 className="text-3xl font-display font-bold">Cybersécurité</h2>
+                      <Sparkles className="h-8 w-8 text-accent" />
+                      <h2 className="text-3xl font-display font-bold">Studio Créatif</h2>
                     </div>
                     <p className="text-muted-foreground mb-6">
-                      Sécurisation, surveillance et configuration de vos infrastructures réseau
+                      Workshops, animations et guidelines pour garantir une expérience interactive cohérente.
                     </p>
-                    <div className="mb-6 space-y-2">
+                    <div className="mb-6 space-y-3">
                       <div className="flex items-center gap-3">
                         <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
-                            whileInView={{ width: "95%" }}
+                            whileInView={{ width: "96%" }}
                             transition={{ duration: 1, delay: 0.2 }}
                             viewport={{ once: true }}
                             className="h-full bg-gradient-to-r from-primary to-accent"
                           />
                         </div>
-                        <span className="text-sm text-muted-foreground">Network Security</span>
+                        <span className="text-sm text-muted-foreground">Branding</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: "92%" }}
+                            transition={{ duration: 1, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className="h-full bg-gradient-to-r from-primary to-accent"
+                          />
+                        </div>
+                        <span className="text-sm text-muted-foreground">UX Motion</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: "90%" }}
-                            transition={{ duration: 1, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className="h-full bg-gradient-to-r from-primary to-accent"
-                          />
-                        </div>
-                        <span className="text-sm text-muted-foreground">Pentesting</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "88%" }}
                             transition={{ duration: 1, delay: 0.6 }}
                             viewport={{ once: true }}
                             className="h-full bg-gradient-to-r from-primary to-accent"
                           />
                         </div>
-                        <span className="text-sm text-muted-foreground">Incident Response</span>
+                        <span className="text-sm text-muted-foreground">Prototypage</span>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {securitySkills.map((skill, index) => (
+                      {creativeSkills.map((skill, index) => (
                         <motion.div
                           key={skill}
                           initial={{ opacity: 0, scale: 0.8 }}
@@ -281,7 +275,7 @@ export default function Skills() {
                           transition={{ delay: index * 0.05 }}
                           viewport={{ once: true }}
                         >
-                          <Badge variant="secondary" data-testid={`badge-security-${index}`}>
+                          <Badge variant="secondary" data-testid={`badge-creative-${index}`}>
                             {skill}
                           </Badge>
                         </motion.div>

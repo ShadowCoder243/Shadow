@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Palette, ShieldCheck, Terminal } from "lucide-react";
+import { ArrowRight, Code2, Palette, Terminal } from "lucide-react";
+import { SiFacebook, SiTelegram } from "react-icons/si";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ParticlesBackground } from "@/components/effects/ParticlesBackground";
@@ -7,7 +8,8 @@ import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { GlowCard } from "@/components/motion/GlowCard";
 import { fadeInUp } from "@/components/motion/variants";
-import heroImage from "@assets/generated_images/Cyberpunk_hero_background_19e73930.png";
+import heroImage from "@assets/generated_images/Graphic_design_workspace_a6e46fef.png";
+import { Logo } from "@/components/Logo";
 
 export default function Home() {
   return (
@@ -30,19 +32,7 @@ export default function Home() {
             className="mb-8"
           >
             <div className="relative inline-block">
-              <Code2 className="h-24 w-24 md:h-32 md:w-32 text-primary mx-auto" />
-              <motion.div
-                className="absolute inset-0 bg-primary/30 rounded-full blur-3xl"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
+              <Logo size={120} className="md:w-32 md:h-32" />
             </div>
           </motion.div>
 
@@ -65,7 +55,7 @@ export default function Home() {
             className="text-xl md:text-2xl text-muted-foreground mb-8 font-mono"
             data-testid="text-hero-slogan"
           >
-            Stay in the shadow, code in the light
+            Front-end interactif, design immersif et accompagnement digital clé en main
           </motion.p>
 
           <motion.div
@@ -85,6 +75,37 @@ export default function Home() {
                 Me contacter
               </Button>
             </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground"
+          >
+            <a href="mailto:shadowcoder243@gmail.com" className="hover:text-foreground transition-colors">
+              shadowcoder243@gmail.com
+            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://facebook.com/ShadowCOder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+              >
+                <SiFacebook className="h-4 w-4" />
+                ShadowCoder
+              </a>
+              <a
+                href="https://t.me/ShadowCoder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-accent transition-colors"
+              >
+                <SiTelegram className="h-4 w-4" />
+                ShadowCoder
+              </a>
+            </div>
           </motion.div>
         </div>
 
@@ -113,8 +134,8 @@ export default function Home() {
               Ce que je fais
             </h2>
             <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-              Développement web, design graphique, support IT et cybersécurité - 
-              je transforme vos idées en solutions digitales professionnelles
+              Développement front-end, design graphique et accompagnement digital —
+              je transforme vos idées en expériences interactives prêtes à être déployées.
             </p>
           </FadeIn>
 
@@ -127,10 +148,10 @@ export default function Home() {
                     <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
                   </div>
                   <h3 className="text-xl font-display font-semibold mb-2">
-                    Développement Web
+                    Front-end immersif
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Sites web, applications, APIs et automatisation avec les technologies modernes
+                    Sites vitrines rapides, dashboards interactifs et micro-animations réactives.
                   </p>
                 </div>
               </GlowCard>
@@ -147,7 +168,7 @@ export default function Home() {
                     Design Graphique
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Logos, affiches, UI/UX - création visuelle qui marque les esprits
+                    Logos, identités visuelles et interfaces harmonieuses totalement intégrées au site.
                   </p>
                 </div>
               </GlowCard>
@@ -161,31 +182,15 @@ export default function Home() {
                     <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
                   </div>
                   <h3 className="text-xl font-display font-semibold mb-2">
-                    Support IT
+                    Accompagnement Digital
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Maintenance, dépannage et optimisation de vos systèmes informatiques
+                    Mise en ligne, automatisations no-code légères et coaching pour garder vos outils à jour.
                   </p>
                 </div>
               </GlowCard>
             </motion.div>
 
-            <motion.div variants={fadeInUp}>
-              <GlowCard glowColor="blue">
-                <div className="p-6" data-testid="card-service-security">
-                  <div className="relative">
-                    <ShieldCheck className="h-12 w-12 text-accent mb-4" />
-                    <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full" />
-                  </div>
-                  <h3 className="text-xl font-display font-semibold mb-2">
-                    Cybersécurité
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Sécurisation, surveillance et configuration de vos infrastructures
-                  </p>
-                </div>
-              </GlowCard>
-            </motion.div>
           </StaggerContainer>
 
           <FadeIn delay={0.4}>
