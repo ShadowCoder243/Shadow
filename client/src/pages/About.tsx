@@ -39,14 +39,14 @@ export default function About() {
         <FadeIn>
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" data-testid="text-about-heading">
-              Qui est ShadowCoder?
+              Qui est ShadowCoder243 ?
             </h1>
             <div className="flex justify-center mb-8">
               <Logo size={80} />
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Un passionné d'informatique, créatif et polyvalent, qui ne code pas juste des lignes 
-              mais construit des mondes digitaux
+              ShadowCoder243 est un passionné d'informatique, créatif et polyvalent, qui ne code pas juste des lignes 
+              mais construit des mondes digitaux accessibles à tous.
             </p>
           </div>
         </FadeIn>
@@ -68,9 +68,14 @@ export default function About() {
                 Je combine expertise technique et vision créative pour transformer vos idées en 
                 réalité digitale.
               </p>
+              <p className="text-muted-foreground mb-4">
+                Avec ShadowCoder243, je cultive une approche artisanale : compréhension précise de la marque,
+                prototypage rapide, phase d'itération et déploiement maîtrisé sur Vercel ou GitHub.
+                Cette méthode garantit des interfaces rapides, accessibles et prêtes à scaler.
+              </p>
               <p className="text-muted-foreground">
                 Que ce soit un site web élégant, une application front-end performante ou un design captivant,
-                je m'engage à livrer l'excellence.
+                je m'engage à livrer l'excellence et à rester présent pour l'évolution de vos outils.
               </p>
             </div>
           </motion.div>
@@ -106,6 +111,28 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-24"
+        >
+          <div className="bg-muted/30 border border-border rounded-lg p-8">
+            <h2 className="text-2xl font-display font-bold mb-4">Pourquoi ShadowCoder243</h2>
+            <p className="text-muted-foreground mb-4">
+              Le nom ShadowCoder243 reflète mon envie de travailler dans l'ombre pour faire briller vos projets.
+              Le numéro 243 rappelle mon attachement au Congo et à la communauté créative qui m'inspire. 
+              Mon objectif est simple : rendre votre marque visible en ligne, tout en vous laissant concentré sur votre cœur de métier.
+            </p>
+            <p className="text-muted-foreground">
+              En combinant storytelling, design système et automatisations no-code légères, je propose des expériences cohérentes,
+              multicanales et faciles à déployer. Cette vision, je la partage sur les réseaux sociaux, les plateformes freelances et 
+              désormais sur Google, afin que le mot-clé “ShadowCoder243” devienne synonyme de fiabilité digitale.
+            </p>
+          </div>
+        </motion.div>
 
         <FadeIn>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-16">

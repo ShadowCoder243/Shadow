@@ -44,7 +44,7 @@ export default function Home() {
             data-testid="text-hero-title"
           >
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-300% animate-gradient">
-              ShadowCoder
+              ShadowCoder243
             </span>
           </motion.h1>
 
@@ -55,7 +55,7 @@ export default function Home() {
             className="text-xl md:text-2xl text-muted-foreground mb-8 font-mono"
             data-testid="text-hero-slogan"
           >
-            Front-end interactif, design immersif et accompagnement digital clé en main
+            ShadowCoder243 conçoit un front-end interactif, un design immersif et un accompagnement digital clé en main.
           </motion.p>
 
           <motion.div
@@ -134,7 +134,7 @@ export default function Home() {
               Ce que je fais
             </h2>
             <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-              Développement front-end, design graphique et accompagnement digital —
+              ShadowCoder243 réunit développement front-end, design graphique et accompagnement digital —
               je transforme vos idées en expériences interactives prêtes à être déployées.
             </p>
           </FadeIn>

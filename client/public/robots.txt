@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shadowcoder243.vercel.app/sitemap.xml
+
